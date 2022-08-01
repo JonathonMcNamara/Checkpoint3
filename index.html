@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Wayfinder</title>
+</head>
+
+<body class="fourth">
+  <header>
+    <nav class="mb-4 primary navbar navbar-dark navbar-expand text-light no-select">
+      <a class="navbar-brand ms-3" href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQhUUA8AI0SpU-skKcdRKnww-1I_vElcp6OA&usqp=CAU" height="45" alt=""
+          loading="lazy">
+          <span class="ms-2">Wayfinder</span>
+          <span class='px-4 bi bi-plus'>Book your trip</span>
+      </a>
+    </nav>
+  </header>
+  <main class="container-fluid">
+      <!-- NOTE TOP OF FORM -->
+      <form action="" onsubmit="app.tripsController.createTrip()" class="row mx-4 elevation-2 bg-white">
+      <h4>Create your trip</h4>
+      <div class="col-12">
+      <section class="row px-4">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-1 p-0">Type</div>
+            <div class="col-2 p-0 text-center">Name</div>
+            <div class="col-3 p-0 text-center">Confirmation Number</div>
+            <div class="col-1 p-0 text-center">Date</div>
+            <div class="col-4 p-0 text-center">Address</div>
+            <div class="col-1 p-0 text-start">Cost</div>
+          </div>
+        </div>
+      </section>
+      </div>
+        <section class="py-4 col-md-12">
+          <div class="row">
+            <div class="col-4 col-md-12 d-flex justify-content-between">
+            <select  class="form-control" required name="type" id="type">
+              <option class="form-control" required value="Select" disabled selected>Select</option>
+              <option class="form-control" required value="Select">Flight</option>
+              <option class="form-control" required value="Select">Food</option>
+              <option class="form-control" required value="Select">Hotel</option>
+            </select> 
+              <input class="form-control" required  minlength="3" maxlength="15" type="text" id="name" name="name" placeholder="Name..">
+              <input class="form-control" required type="text" id="confirmation" name="confirmation" placeholder="Confirmation..">
+              <input class="form-control" required type="date" id="date" name="date" placeholder="Date">
+              <input class="form-control" required type="text" id="address" name="address" placeholder="Address..">
+              <input class="form-control" required type="number" id="price" name="price" placeholder="Total $">
+          </div>
+          <section class="row">
+            <div class="col-6 col-md-12 d-flex justify-content-end">
+              <button type="submit" class="rounded-pill">Start Trip</button>
+            </div>
+          </section>
+          <section class="row">
+            <div class="col-4 col-md-12">
+              <label for="notes"><b>Notes</b></label><br>
+              <textarea class="form-label" name="notes" id="notes" cols="50" rows="5"></textarea>
+            </div>
+            <section class="row d-flex justify-content-end">
+              <div class="col-4 col-md-12 text-end"><h3>Total: $</h3></div>
+            </section>
+          </section>
+        </section>
+          </section>
+      </form>
+      <!-- NOTE bottom of form -->
+      <section id="trips">
+
+      </section>
+  </main>
+  <footer class="primary text-light">
+    <div class="text-center no-select">
+      <p><small>Made by Jon</small></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
